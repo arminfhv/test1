@@ -1,14 +1,4 @@
 # Maven
-- task: AzureFileCopy@4
-  inputs:
-    SourcePath: 'https://github.com/Microsoft/azure-pipelines-tasks'
-    azureSubscription: 'LV-SAR(ae7190dc-987c-4d45-a531-2ba5e21b45fc)'
-    Destination: 'AzureBlob'
-    storage: 'alv13638'
-    ContainerName: 'con1'
-# Build your Java project and run tests with Apache Maven.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
 - master
@@ -54,3 +44,14 @@ steps:
     #checkStyleRunAnalysis: false # Optional
     #pmdRunAnalysis: false # Optional
     #findBugsRunAnalysis: false # Optional
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: 'https://github.com/Microsoft/azure-pipelines-tasks'
+    azureSubscription: 'LV-SAR(ae7190dc-987c-4d45-a531-2ba5e21b45fc)'
+    Destination: 'AzureBlob'
+    storage: 'alv13638'
+    ContainerName: 'con1'
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
